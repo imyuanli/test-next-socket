@@ -23,7 +23,7 @@ export default function Index() {
         socket.emit('addTodo', value);
         setValue('')
     }
-    const handleDelete= (index) => {
+    const handleDelete= (index:any) => {
         socket.emit('deleteTodo', index);
     }
     return (
