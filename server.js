@@ -35,7 +35,7 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
   const httpServer = http.createServer(server);
-  const io = socketIO(httpServer);
+  const io = socketIO(httpServer,{cors:true});
 // 存储待办事项列表 那我就要问你给问题了 1你觉得js最难的知识点是啥 有个人说是原型链 ？还好吧其实还是promise怎么说
 //   promise 多jb难操，原型链还是比较好理解的   操 这样能智能出来？你是不是想说这句话1害怕 别慌 你说你觉得js最难的知识点是啥
   var todoList = [
